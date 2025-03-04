@@ -8,7 +8,7 @@
 std::string list()
 {
     std::string total_txt;
-    char buffer[121] = {0};  // ইনিশিয়ালাইজ করা হলো
+    char buffer[121] = {0}; 
     FILE *fp = popen("ls ", "r");
     while (fgets(buffer, sizeof(buffer), fp) != nullptr)
     {
