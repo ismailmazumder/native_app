@@ -17,6 +17,8 @@ std::string list()
     return total_txt;
 }
 
+
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_myapplication_MainActivity_stringFromJNI(
         JNIEnv* env,
