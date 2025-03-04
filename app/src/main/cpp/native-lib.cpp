@@ -13,24 +13,13 @@ std::string list()
     while (fgets(buffer, sizeof(buffer), fp) != nullptr)
     {
         total_txt +=  buffer;
-
     }
     return total_txt;
 }
-
-
-
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_myapplication_MainActivity_stringFromJNI(
         JNIEnv* env,
         jobject /* this */) {
     std::string final = list();
     return env->NewStringUTF(final.c_str());
-}
-
-int main()
-{
-
-
-    return 0;
 }
