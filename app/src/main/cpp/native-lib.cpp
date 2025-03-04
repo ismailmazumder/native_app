@@ -12,7 +12,7 @@ std::string list()
     FILE *fp = popen("ls ", "r");
     while (fgets(buffer, sizeof(buffer), fp) != nullptr)
     {
-        total_txt +=  buffer;
+
     }
     return total_txt;
 }
