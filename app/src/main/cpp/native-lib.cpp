@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 #include <memory>
-
+#include<cstring>
 std::string list()
 {
     std::string total_txt;
@@ -13,6 +13,7 @@ std::string list()
     while (fgets(buffer, sizeof(buffer), fp) != nullptr)
     {
         total_txt +=  buffer;
+
     }
     return total_txt;
 }
