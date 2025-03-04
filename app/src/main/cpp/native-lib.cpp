@@ -14,6 +14,7 @@ std::string list()
     {
         total_txt +=  buffer;
     }
+    pclose(fp);
     return total_txt;
 }
 extern "C" JNIEXPORT jstring JNICALL
