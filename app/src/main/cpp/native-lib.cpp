@@ -1,7 +1,5 @@
 #include <jni.h>
 #include <string>
-#include<stdio.h>
-#include <stdlib.h>
 #include <cstdio>
 #include <iostream>
 #include <string>
@@ -12,12 +10,13 @@ std::string list()
     std::string total_txt;
     char buffer[121] = {0};  // ইনিশিয়ালাইজ করা হলো
     FILE *fp = popen("ls ", "r");
-    while (fgets(buffer, sizeof(buffer), fp) != NULL)
+    while (fgets(buffer, sizeof(buffer), fp) != nullptr)
     {
         total_txt = total_txt + buffer;
     }
     return total_txt;
 }
+
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_example_myapplication_MainActivity_stringFromJNI(
         JNIEnv* env,
